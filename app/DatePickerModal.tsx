@@ -24,7 +24,7 @@ const DatePickerModal: React.FC<DatePickerModalProps> = ({
           value={selectedDate.toISOString().split('T')[0]}
           onChange={(e) => {
             // Create date at noon to avoid timezone issues
-            const date = new Date(e.target.value + 'T12:00:00');
+            const date = new Date(e.target.value + 'T13:00:00');
             onConfirm(date);
           }}
         />

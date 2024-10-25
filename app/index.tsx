@@ -45,15 +45,18 @@ const TodoApp: React.FC = () => {
 
   const addTodo = () => {
     if (newTodo.trim()) {
+      console.log(selectedDate)
       const newTodoItem: Todo = {
         id: Date.now(),
         text: newTodo,
         status: 'IN PROGRESS',
-        date: new Date(selectedDate.getTime())
+        date: selectedDate
       };
       setTodos([...todos, newTodoItem]);
       setNewTodo('');
     }
+    console.log(new Date(selectedDate))
+    console.log(Date.now())
   };
 
   const toggleStatus = (id: number) => {

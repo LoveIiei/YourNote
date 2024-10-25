@@ -41,7 +41,8 @@ const TodoList: React.FC<TodoListProps> = ({
     return dateObj.toLocaleTimeString('en-US', {
       hour: '2-digit',
       minute: '2-digit',
-      hour12: true
+      hour12: true,
+      timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone // Ensure correct timezone is used
     });
   };
 
